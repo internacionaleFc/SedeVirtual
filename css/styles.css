@@ -70,6 +70,21 @@ body {
 
 }
 
+.video-responsive {
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
+
 h1#title-banner{
   
   /*font-family: 'Josefin Slab', serif;
@@ -78,12 +93,13 @@ h1#title-banner{
   font-family: 'Pacifico', cursive;
   font-family: 'Roboto', sans-serif;*/
   font-family: 'Amatic SC', cursive;
-  font-size: 8vw;
+  font-size: 7vw;
   
 }
 
 h1#title-about{
-  font-family: 'Noto Sans KR', sans-serif;;
+  font-family: 'Noto Sans KR', sans-serif;
+ 
   font-size: 3.7vw;
  
 }
@@ -92,7 +108,7 @@ h1#title-about{
   font-family: 'Noto Sans KR', sans-serif;;
   font-size:1.2vw;
   font: bold;
-  color: #000;
+  color:#000;
   text-align: justify;
 }
 
@@ -11014,7 +11030,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 85, 66, 0.8) 0%, rgba(108, 114, 79, 0.8) 100%), url("../assets/img/inter.jpg");
+  background: linear-gradient(to bottom, rgba(92, 85, 66, 0.8) 0%, rgba(108, 114, 79, 0.8) 100%), url("../assets/img/profes.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

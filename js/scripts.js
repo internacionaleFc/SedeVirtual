@@ -91,3 +91,8 @@ map.addEventListener('click', ()=>{
    address.classList.add('animate__animated', 'animate__backInUp');
 
 })
+
+function sendEmail(){
+    alert('entro')
+    window.open('mailto:test@example.com?subject=subject&body=mensaje de prueba');
+}

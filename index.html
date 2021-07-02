@@ -30,8 +30,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about" id="sobre">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services" id="map">nuestra ubicacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services" id="map">Nuestra Ubicacion</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -61,12 +61,15 @@
         <section class="page-section bg-primary" id="about">
             <div class="container px-4">
                 <div class="row gx-5">
-                  <div class="col"   >
-                   <div class="p-3 border bg-light" style=" height: 30vw;" >   
-                    <iframe id="video" style="margin-left: 0.5vw; margin-top: 6vw;" width="560" height="315" src="https://www.youtube.com/embed/tGYXDWs7HO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                  <div class="col">
+                        <div class="p-3 border bg-white" style="height: 100; align-self: center;" > 
+                            <div class="video-responsive">
+                                <iframe id="video" src="https://www.youtube.com/embed/tGYXDWs7HO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
                   </div>
                   <div class="col" style="text-align: center;">
-                    <div class="p-3 border bg-light">  
+                    <div class="p-3 border bg-white">  
                         <h1 id="title-about">¿QUIENES SOMOS?</h1>
                         <hr class="divider" >
                         <p class="about-p" id="text-about">La Fundación INTERNACIONALE F.C, como Entidad Sin Animo de Lucro, es un movimiento profundamente humanista, que nace como respuesta a los problemas sociales de nuestro País, nuestra población vulnerable es un sector que con grandes esfuerzos viene siendo atendida de una manera deficiente, por esto nuestra propuesta pretende ser una herramienta de apoyo y ayuda mediante la formación deportiva y la generación de proyectos empresariales y sociales</p>
@@ -79,10 +82,8 @@
        
         <!-- Portfolio-->
         <div id="portfolio">
-            <div class="container-fluid p-0">
-       
+            <div class="container-fluid p-0" style="background-color: #009440;">       
                 <div class="row g-0">
-                    
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/zidane.jpeg" title="Presidente y Fundador" >
                             <img class="img-fluid" src="assets/img/portfolio/zidane.jpeg" alt="..." />
@@ -141,9 +142,9 @@
             </div>
         </div>
          <!-- Services-->
-         <section class="page-section" id="services" style="background-color: #009440;">
+         <section class="page-section" id="services" style="background-color: white">
             <div class="container px-4 px-lg-5" style="text-align: center;">
-                <h2 class="text-center mt-0" style="color: white;" id="title-map">¿Donde encontrarnos?</h2>
+                <h2 class="text-center mt-0" style="color:black;" id="title-map">¿Donde encontrarnos?</h2>
                 <hr class="divider" id="divider-map" />
                 <div class="map-responsive" id="address">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.0816534567545!2d-74.10514906676943!3d4.716542882072952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8512e52c6969%3A0xb25e959763f8bc99!2sSede%20administrativa%20Fundaci%C3%B3n%20Deportiva%20Internacionale!5e0!3m2!1ses!2sco!4v1625088072106!5m2!1ses!2sco" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -159,78 +160,12 @@
         </section>
         <!-- Contact-->
         <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
-                    </div>
-                </div>
-            </div>
+           <form>
+               <label for="name">ingresa dato</label>
+               <input type="text" id="name">
+               <input type="button" onclick="sendEmail()" value="enviar">
+           </form>
+           
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
@@ -241,7 +176,7 @@
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
