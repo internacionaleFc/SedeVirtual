@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-var about = document.getElementById("about")
+var about = document.getElementById("about-button")
 
 about.addEventListener('click', ()=>{
     var title = document.getElementById('title-about')
