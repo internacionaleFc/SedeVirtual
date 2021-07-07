@@ -60,39 +60,60 @@ window.addEventListener('DOMContentLoaded', event => {
 
 var about = document.getElementById("about-button")
 
-about.addEventListener('click', ()=>{
+about.addEventListener('click', () => {
     var title = document.getElementById('title-about')
     var pagraph = document.getElementById('text-about')
 
 
-     title.classList.add('animate__animated', 'animate__backInRight');
-     pagraph.classList.add('animate__animated', 'animate__backInRight');
-           
+    title.classList.add('animate__animated', 'animate__backInRight');
+    pagraph.classList.add('animate__animated', 'animate__backInRight');
+
 })
 
 about = document.getElementById('sobre')
-about.addEventListener('click',()=>{
+about.addEventListener('click', () => {
     var title = document.getElementById('title-about')
     var pagraph = document.getElementById('text-about')
 
-     title.classList.add('animate__animated', 'animate__backInRight');
-     pagraph.classList.add('animate__animated', 'animate__backInRight');
+    title.classList.add('animate__animated', 'animate__backInRight');
+    pagraph.classList.add('animate__animated', 'animate__backInRight');
+
+})
+
+
+
+
+var admi = document.getElementById('admin')
+admi.addEventListener('click', () => {
+    var title = document.getElementById('title-map1')
+    var address = document.getElementById('div-map-admin')
+    var images = document.getElementById('carouselExampleInterval')
+    var divider = document.getElementById('divider-map1')
+
     
+    divider.classList.add('animate__animated', 'animate__backInUp');
+    title.classList.add('animate__animated', 'animate__backInUp');
+    images.classList.add('animate__animated', 'animate__backInUp');
+    address.classList.add('animate__animated', 'animate__backInUp');
 })
 
-var map = document.getElementById('map')
-map.addEventListener('click', ()=>{
-    var address =  document.getElementById('address')
+var princi = document.getElementById('princi')
+princi.addEventListener('click', ()=>{
+ 
     var title = document.getElementById('title-map')
-    var divisor = document.getElementById('divider-map')
+    var address = document.getElementById('div-map-princi')
+    var images = document.getElementById('carouselExampleInterval1')
+    var divider = document.getElementById('divider-map')
 
-   title.classList.add('animate__animated', 'animate__backInDown');
-   divisor.classList.add('animate__animated', 'animate__backInDown');
-   address.classList.add('animate__animated', 'animate__backInUp');
+    divider.classList.add('animate__animated', 'animate__backInUp');
+    title.classList.add('animate__animated', 'animate__backInUp');
+    images.classList.add('animate__animated', 'animate__backInUp');
+    address.classList.add('animate__animated', 'animate__backInUp');
 
 })
 
-function sendEmail(){
+
+function sendEmail() {
     alert('entro')
     window.open('mailto:test@example.com?subject=subject&body=mensaje de prueba');
 }
