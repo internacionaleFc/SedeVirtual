@@ -97,12 +97,21 @@ h1#title-banner{
   
 }
 
+a#about-button{
+  --animate-repeat:	infinite   ;
+}
+
 h1#title-about{
   font-family: 'Noto Sans KR', sans-serif;
  
   font-size: 3.7vw;
  
 }
+
+
+
+
+
 
 .about-p{
   font-family: 'Noto Sans KR', sans-serif;;
@@ -2607,6 +2616,7 @@ textarea.form-control-lg {
   border-color: transparent;
   border-radius: 1rem;
 }
+
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
@@ -11030,7 +11040,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 85, 66, 0.8) 0%, rgba(108, 114, 79, 0.8) 100%), url("../assets/img/profes.png");
+  background: linear-gradient(to bottom, rgba(92, 85, 66, 0.8) 0%, rgba(108, 114, 79, 0.7) 100%), url("../assets/img/portada.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
