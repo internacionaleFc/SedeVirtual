@@ -112,6 +112,17 @@ princi.addEventListener('click', ()=>{
 
 })
 
+var home = document.getElementById('home')
+home.addEventListener('click', ()=>{
+     var  title = document.getElementById('title-banner')
+     
+     title.classList.add('animate__animated', 'animate__fadeInDown')
+})
+
+var  title = document.getElementById('title-banner')
+     
+title.classList.add('animate__animated', 'animate__fadeInDown')
+
 
 function sendEmail() {
     alert('entro')
