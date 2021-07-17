@@ -149,16 +149,15 @@ a#about-button {
 
 h1#title-about {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 3.7vw;
+    font-size: 2rem;
 }
 
 .about-p {
     font-family: 'Noto Sans KR', sans-serif;
-    ;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font: bold;
     color: #000;
-    text-align: justify;
+    text-align:justify;
 }
 
 hr {
