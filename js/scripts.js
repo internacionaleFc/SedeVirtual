@@ -115,11 +115,22 @@ home.addEventListener('click', () => {
     var title = document.getElementById('title-banner')
 
     title.classList.add('animate__animated', 'animate__fadeInDown')
+
+    var title = document.getElementById('title-banner')
+
+    title.classList.add('animate__animated', 'animate__fadeInDown')
 })
 
-var title = document.getElementById('title-banner')
 
-title.classList.add('animate__animated', 'animate__fadeInDown')
+var contact = document.getElementById('contacto')
+contact.addEventListener('click', () => {
+
+    var div = document.getElementById('contact-us')
+
+    div.classList.add('animate__animated', 'animate__fadeInDown')
+
+
+})
 
 function sendData() {
     var email = document.getElementById('email').value
@@ -133,10 +144,16 @@ function sendData() {
         email.includes('.')) {
 
         var http = new XMLHttpRequest()
-        var uri = 'http://34.95.240.202:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
+        var uri = 'http://http:/34.95.240.202:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
         http.open('POST', uri, true)
         http.send()
+
         swal("Envio de datos Exitosos", "Informacion enviada con exito.")
+        email = ""
+        name = ""
+        text = ""
+        phone = ""
+        matter = ""
 
     } else {
         if (email == "" && name == "" && text == "" && matter == "" &&
