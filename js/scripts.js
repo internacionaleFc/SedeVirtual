@@ -1,8 +1,8 @@
 /*!
-* Start Bootstrap - Creative v7.0.3 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
+ * Start Bootstrap - Creative v7.0.3 (https://startbootstrap.com/theme/creative)
+ * Copyright 2013-2021 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+ */
 //
 // Scripts
 // 
@@ -10,7 +10,7 @@
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
-    var navbarShrink = function () {
+    var navbarShrink = function() {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', event => {
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
-    responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItems.map(function(responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
@@ -129,11 +129,11 @@ function sendData() {
     var matter = document.getElementById("matter").value
 
     if (email != "" && name != "" && text != "" && matter != "" &&
-        phone != "" && email.includes('@')
-        && email.includes('.')) {
+        phone != "" && email.includes('@') &&
+        email.includes('.')) {
 
         var http = new XMLHttpRequest()
-        var uri = 'http://35.199.121.206:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
+        var uri = 'http://34.95.240.202:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
         http.open('POST', uri, true)
 
         http.onreadystatechange = () => {
@@ -151,8 +151,8 @@ function sendData() {
             phone == "") {
 
             swal("Error al ingresar datos", "Todos los campos estan vacios.")
-        } else if (email != "" && !email.includes('@')
-            && !email.includes('.')) {
+        } else if (email != "" && !email.includes('@') &&
+            !email.includes('.')) {
             swal('Error en el campo email', 'Verifique que este bien escrito su email y que contenga los caracteres "@" y  "." .')
 
         } else if (isNaN(email) || isNaN(name) || isNaN(text) || isNaN(matter)) {
