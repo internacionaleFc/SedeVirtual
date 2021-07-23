@@ -135,16 +135,8 @@ function sendData() {
         var http = new XMLHttpRequest()
         var uri = 'http://34.95.240.202:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
         http.open('POST', uri, true)
-
-        http.onreadystatechange = () => {
-            if (http.readyState == 4) {
-                swal(http.status)
-            }
-        }
-
-
         http.send()
-
+        swal("Envio de datos Exitosos", "Informacion enviada con exito.")
 
     } else {
         if (email == "" && name == "" && text == "" && matter == "" &&
