@@ -137,8 +137,8 @@ function sendData() {
         http.open('POST', uri, true)
 
         http.onreadystatechange = () => {
-            if (http.readyState == 4 && http.status == 200) {
-                swal("Envio de datos Exitosos", "Informacion enviada con exito.")
+            if (http.readyState == 4) {
+                swal(http.status)
             }
         }
 
