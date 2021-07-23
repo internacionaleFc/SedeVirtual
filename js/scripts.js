@@ -36,7 +36,8 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#mainNav',
             offset: 74,
         });
-    };
+    }
+
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -81,8 +82,6 @@ about.addEventListener('click', () => {
 })
 
 
-
-
 var admi = document.getElementById('admin')
 admi.addEventListener('click', () => {
     var title = document.getElementById('title-map1')
@@ -90,17 +89,16 @@ admi.addEventListener('click', () => {
     var images = document.getElementById('carouselExampleInterval')
     var divider = document.getElementById('divider-map1')
 
-    
+
     divider.classList.add('animate__animated', 'animate__backInUp');
     title.classList.add('animate__animated', 'animate__backInUp');
     images.classList.add('animate__animated', 'animate__backInUp');
     address.classList.add('animate__animated', 'animate__backInUp');
 })
 
-var princi = document.getElementById('princi')
-princi.addEventListener('click', ()=>{
- 
-    var title = document.getElementById('title-map')
+var princi = document.getElementById('principal')
+princi.addEventListener('click', () => {
+    var title = document.getElementById('title-map2')
     var address = document.getElementById('div-map-princi')
     var images = document.getElementById('carouselExampleInterval1')
     var divider = document.getElementById('divider-map')
@@ -113,18 +111,57 @@ princi.addEventListener('click', ()=>{
 })
 
 var home = document.getElementById('home')
-home.addEventListener('click', ()=>{
-     var  title = document.getElementById('title-banner')
-     
-     title.classList.add('animate__animated', 'animate__fadeInDown')
+home.addEventListener('click', () => {
+    var title = document.getElementById('title-banner')
+
+    title.classList.add('animate__animated', 'animate__fadeInDown')
 })
 
-var  title = document.getElementById('title-banner')
-     
+var title = document.getElementById('title-banner')
+
 title.classList.add('animate__animated', 'animate__fadeInDown')
 
+function sendData() {
+    var email = document.getElementById('email').value
+    var name = document.getElementById('name').value
+    var text = document.getElementById('text-body').value
+    var phone = document.getElementById('phone').value
+    var matter = document.getElementById("matter").value
 
-function sendEmail() {
-    alert('entro')
-    window.open('mailto:test@example.com?subject=subject&body=mensaje de prueba');
+    if (email != "" && name != "" && text != "" && matter != "" &&
+        phone != "" && email.includes('@')
+        && email.includes('.')) {
+
+        var http = new XMLHttpRequest()
+        var uri = 'http://35.199.121.206:8080/Internacionale-1.0-SNAPSHOT/api/send-email/' + name + "/" + matter + "/" + phone + "/" + email + "/" + text
+        http.open('POST', uri, true)
+
+        http.onreadystatechange = () => {
+            if (http.readyState == 4 && http.status == 200) {
+                swal("Envio de datos Exitosos", "Informacion enviada con exito.")
+            }
+        }
+
+
+        http.send()
+
+
+    } else {
+        if (email == "" && name == "" && text == "" && matter == "" &&
+            phone == "") {
+
+            swal("Error al ingresar datos", "Todos los campos estan vacios.")
+        } else if (email != "" && !email.includes('@')
+            && !email.includes('.')) {
+            swal('Error en el campo email', 'Verifique que este bien escrito su email y que contenga los caracteres "@" y  "." .')
+
+        } else if (isNaN(email) || isNaN(name) || isNaN(text) || isNaN(matter)) {
+            swal('Error en el campos', 'Verifique campos email,nombre,mensaje y/o asunto !! Estos campos NO deben tener número ¡¡.')
+        } else if (email == "" || name == "" || text == "" || matter == "" ||
+            phone == "") {
+            swal('Error en el campos', 'Verifique campos email,nombre,mensaje y/o asunto, algúno de estos campos esta vacio.')
+        }
+
+    }
+
 }
